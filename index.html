@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI Index calculator App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Overlock"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bmi-app">
+      <div class="cards">
+        <div class="cards__bmi-input-info cards__flex">
+          <form action="" id="form">
+            <div id="weight-input" class="user-inputs">
+              <label for="weight">Weight</label>
+              <input
+                id="weight"
+                type="number"
+                step="0.01"
+                placeholder="Weight in Kilogram"
+                autocomplete="none"
+                onkeydown="return event.keyCode !== 69"
+              />
+            </div>
+            <div id="height-input" class="user-inputs">
+              <label for="weight">Height</label>
+              <input
+                id="height"
+                type="number"
+                step="0.01"
+                placeholder="Height in meter"
+                autocomplete="none"
+                onkeydown="return event.keyCode !== 69"
+              />
+            </div>
+            <button>Calculate</button>
+          </form>
+          <div class="card__bmi-info">
+            <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+            <ul class="card__bmi-range">
+              <li>Underweight: BMI is less than 18.5</li>
+              <li>Normal weight: BMI is 18.5 to 24.9</li>
+              <li>Overweight: BMI is 25 to 29.9</li>
+              <li>Obese: BMI is greater than 30 or more</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cards__bmi-image-result cards__flex">
+          <div class="cards__bmi-image">
+            <img class="bmi-image" src="./asset/default.jpg" alt="" />
+          </div>
+          <div class="card__bmi-result">
+            See your BMI result here!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
