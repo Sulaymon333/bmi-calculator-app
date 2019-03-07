@@ -10,7 +10,7 @@ form.addEventListener('submit', e => {
     bmiInfo.forEach((item, index) => {
       bmiInfo[index].style.color = '#fff';
     });
-    bmiResult.textContent = `Please provide a numeric value`;
+    bmiResult.textContent = `Please provide a valid numeric value`;
     bmiResult.style.backgroundColor = '#28505099';
     bmiResult.style.color = '#e51212';
     bmiImage.setAttribute('src', './asset/default.jpg');
