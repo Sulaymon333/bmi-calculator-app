@@ -1,7 +1,5 @@
 body {
   color: #333;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Overlock', cursive;
   font-size: 16px;
   box-sizing: border-box;
@@ -73,10 +71,13 @@ input {
   border-radius: 10px;
   outline: none;
   border: none;
+  letter-spacing: 0.25px;
+  caret-color: #00000099;
 }
 
 input::-webkit-input-placeholder {
   color: red;
+  color: rgba(5, 238, 25, 0.8);
   font-size: 15px;
 }
 #height {
@@ -97,7 +98,7 @@ button {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  background: rgba(19, 202, 202, 0.4);
+  /* background: rgba(19, 202, 202, 0.4); */
   background: rgba(40, 80, 80, 0.4);
   border: 1.6px solid white;
   border-radius: 20px;
@@ -149,6 +150,16 @@ button {
   box-shadow: 0px 7px 14px -4px rgba(0, 0, 0, 0.75);
 }
 
+.result-ribbon {
+  display: inline-block;
+  padding: 12px;
+  background: rgba(5, 238, 25, 0.8);
+  /* background: #77f47b; */
+  border: 1.6px solid #fff;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
 /* MEDIA QUERY */
 
 @media (max-width: 700px) {
@@ -160,5 +171,8 @@ button {
   }
   .cards__bmi-input-info {
     order: 2;
+  }
+  .result-ribbon {
+    margin-left: 0;
   }
 }

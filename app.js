@@ -4,6 +4,11 @@ const form = document.querySelector('#form');
 const bmiImage = document.querySelector('.bmi-image');
 const bmiResult = document.querySelector('.card__bmi-result');
 const bmiInfo = document.querySelectorAll('.card__bmi-range li');
+const resultRibbon = document.querySelector('.result-ribbon');
+
+document.addEventListener('DOMContentLoaded', function() {
+  weight.focus();
+});
 
 form.addEventListener('submit', e => {
   if (weight.value === '' || height.value === '') {
@@ -27,30 +32,31 @@ form.addEventListener('submit', e => {
     });
     const calculatedBmiResult = weight.value / (height.value * height.value);
     if (calculatedBmiResult < 18.5) {
-      bmiResult.textContent = `Your BMI value is ${calculatedBmiResult.toFixed(
+      bmiResult.innerHTML = `Your BMI value is <span class="result-ribbon">${calculatedBmiResult.toFixed(
         1
-      )}`;
+      )}</span>`;
       bmiImage.setAttribute('src', './asset/underweight.jpg');
       bmiResult.style.backgroundColor = '#ffc826';
       bmiInfo[0].style.color = '#ffc826';
     } else if (calculatedBmiResult >= 18.5 && calculatedBmiResult <= 24.9) {
-      bmiResult.textContent = `Your BMI value is ${calculatedBmiResult.toFixed(
+      bmiResult.innerHTML = `Your BMI value is <span class="result-ribbon">${calculatedBmiResult.toFixed(
         1
-      )}`;
+      )}</span>`;
       bmiImage.setAttribute('src', './asset/normal.jpg');
       bmiResult.style.backgroundColor = '#40ed73';
       bmiInfo[1].style.color = '#40ed73';
     } else if (calculatedBmiResult >= 25 && calculatedBmiResult <= 29.9) {
-      bmiResult.textContent = `Your BMI value is ${calculatedBmiResult.toFixed(
+      bmiResult.innerHTML = `Your BMI value is <span class="result-ribbon">${calculatedBmiResult.toFixed(
         1
-      )}`;
+      )}</span>`;
       bmiImage.setAttribute('src', './asset/overweight.jpg');
       bmiResult.style.backgroundColor = '#9b1f1f';
       bmiInfo[2].style.color = '#9b1f1f';
     } else if (calculatedBmiResult >= 30) {
-      bmiResult.textContent = `Your BMI value is ${calculatedBmiResult.toFixed(
+      bmiResult.innerHTML = `Your BMI value is <span class="result-ribbon">${calculatedBmiResult.toFixed(
         1
-      )}`;
+      )}</span>`;
+      console.log('BMI is', bmiResult);
       bmiImage.setAttribute('src', './asset/obese.jpg');
       bmiResult.style.backgroundColor = '#e51212';
       bmiInfo[3].style.color = '#e51212';
@@ -61,13 +67,4 @@ form.addEventListener('submit', e => {
   }
 
   e.preventDefault();
-});
-
-document.addEventListener('load', function() {
-  console.log('my man');
-});
-
-document.addEventListener('DOMContentLoaded', function(event) {
-  weight.focus();
-  console.log('DOM fully loaded and parsed');
 });
