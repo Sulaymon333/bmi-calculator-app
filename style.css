@@ -72,12 +72,10 @@ input {
   outline: none;
   border: none;
   letter-spacing: 0.25px;
-  caret-color: #00000099;
+  caret-color: rgba(0, 0, 0, 0.8);
 }
 
 input::-webkit-input-placeholder {
-  color: red;
-  color: rgba(5, 238, 25, 0.8);
   font-size: 15px;
 }
 #height {
