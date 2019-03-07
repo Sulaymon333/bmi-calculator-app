@@ -74,6 +74,11 @@ input {
   outline: none;
   border: none;
 }
+
+input::-webkit-input-placeholder {
+  color: red;
+  font-size: 15px;
+}
 #height {
   margin-bottom: 20px;
 }

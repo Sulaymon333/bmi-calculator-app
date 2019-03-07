@@ -62,3 +62,12 @@ form.addEventListener('submit', e => {
 
   e.preventDefault();
 });
+
+document.addEventListener('load', function() {
+  console.log('my man');
+});
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  weight.focus();
+  console.log('DOM fully loaded and parsed');
+});
