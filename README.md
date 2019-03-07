@@ -1,8 +1,8 @@
-#Developing an interactive BMI calculator
+# Developing an interactive BMI calculator
 
 This app is developed as part of my 6 months coding bootcamp at Integrify Helsinki. It is about implementing a mini-project in this case an interactive BMI calculator App by using javaScript fundamentals and DOM manipulation techniques. All functionalities was completed with ONLY Vanilla JavaScript. Happy Coding 😀.
 
-##Demo
+## Demo
 
 You can see the live demo of the App here: https://sulaymon333.github.io/bmi-calculator-app/
 ![BMI app demo](asset/bmi-calculator-app-demo2.gif)
