@@ -15,13 +15,16 @@ form.addEventListener('submit', e => {
     bmiInfo.forEach((item, index) => {
       bmiInfo[index].style.color = '#fff';
     });
-    bmiResult.textContent = `Please provide a valid numeric value`;
-    bmiResult.style.backgroundColor = '#28505099';
+    bmiResult.textContent = `Please provide a valid value`;
+    bmiResult.style.backgroundColor = '#fff';
+    bmiResult.style.borderTop = 'solid 1px #eee';
     bmiResult.style.color = '#e51212';
     bmiImage.setAttribute('src', './asset/default.jpg');
     setTimeout(() => {
       bmiResult.textContent = `See your BMI result here!`;
       bmiResult.style.color = '#fff';
+      bmiResult.style.backgroundColor = '#28505099';
+      bmiResult.style.borderTop = '0';
     }, 3000);
     weight.value = '';
     weight.focus();

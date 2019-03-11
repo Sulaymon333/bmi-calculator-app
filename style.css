@@ -2,8 +2,14 @@ body {
   color: #333;
   font-family: 'Overlock', cursive;
   font-size: 16px;
-  box-sizing: border-box;
   line-height: 1.7;
+  display: grid;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .bmi-app {
@@ -12,13 +18,16 @@ body {
     rgba(19, 245, 245, 0.8),
     rgba(5, 238, 25, 0.7)
   );
-  position: absolute;
+  border-radius: 20px;
+  /* position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-  width: 70vw;
+  transform: translateY(-50%, -50%); */
+  /* width: 80%; */
+  /* width: 70vw; */
+  margin: 10vh auto;
   padding: 20px;
+  max-width: 960px;
 }
 
 .cards {
@@ -81,6 +90,11 @@ input::-webkit-input-placeholder {
 #height {
   margin-bottom: 20px;
 }
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 button {
   width: 60%;
@@ -93,29 +107,33 @@ button {
   box-shadow: 0px 7px 14px -4px rgba(0, 0, 0, 0.75);
 }
 .card__bmi-info {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   /* background: rgba(19, 202, 202, 0.4); */
   background: rgba(40, 80, 80, 0.4);
   border: 1.6px solid white;
   border-radius: 20px;
-  padding: 12px 30px;
+  padding: 0px 25px;
+  padding-bottom: 10px;
   padding-left: 40px;
   font-size: 15px;
-  font-weight: bold;
+  font-size: calc(0.7vw + 9px);
+  /* font-weight: bold; */
   color: #fff;
+  margin-top: 20px;
 }
 
 .info-icon {
   align-self: center;
   font-size: 2.5rem;
+  font-size: calc(1.5vw + 23px);
   position: relative;
   left: -2.4%;
 }
 
 .card__bmi-range {
   padding: 0;
+  margin: 0;
 }
 
 /** CARD 2 **/
@@ -141,29 +159,29 @@ button {
   background: rgba(19, 202, 202, 0.6);
   background: #28505099;
   width: 100%;
-  padding: 25px 0;
+  padding: 18px 10px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  font-size: 30px;
+  font-size: calc(2vw + 7px);
   box-shadow: 0px 7px 14px -4px rgba(0, 0, 0, 0.75);
 }
 
 .result-ribbon {
   display: inline-block;
-  padding: 12px;
+  padding: calc(0.5vw + 4px);
   background: rgba(5, 238, 25, 0.8);
-  /* background: #77f47b; */
+  background: #f3f5f2;
   border: 1.6px solid #fff;
   border-radius: 50%;
-  margin-left: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  margin-left: calc(0.9vw + 5px);
 }
 
 /* MEDIA QUERY */
 
 @media (max-width: 700px) {
-  .cards {
-    margin-top: 5vh;
-  }
   .cards__bmi-image-result {
     order: 1;
   }
@@ -171,6 +189,6 @@ button {
     order: 2;
   }
   .result-ribbon {
-    margin-left: 0;
+    margin-left: 2vw;
   }
 }
