@@ -19,12 +19,6 @@ body {
     rgba(5, 238, 25, 0.7)
   );
   border-radius: 20px;
-  /* position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%, -50%); */
-  /* width: 80%; */
-  /* width: 70vw; */
   margin: 10vh auto;
   padding: 20px;
   max-width: 960px;
@@ -109,7 +103,6 @@ button {
 .card__bmi-info {
   display: flex;
   flex-direction: column;
-  /* background: rgba(19, 202, 202, 0.4); */
   background: rgba(40, 80, 80, 0.4);
   border: 1.6px solid white;
   border-radius: 20px;
@@ -118,7 +111,6 @@ button {
   padding-left: 40px;
   font-size: 15px;
   font-size: calc(0.7vw + 9px);
-  /* font-weight: bold; */
   color: #fff;
   margin-top: 20px;
 }
